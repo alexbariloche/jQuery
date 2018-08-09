@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>
+            Hello, jQuery
+        </title>
+        <style>
+            .big {
+                font-size: 2em;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="chico">Holaaa</div>
+        <div id="grande">Holaaa</div>
+        <!-- <div class="generic-input">
+            <label for="" >Enter text:</label>
+            <input type="text"/>
+            <div id="err"></div>
+        </div>
+ -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+        </script>
+        <script>
+            $(function(){
+                // $('.generic-input').children('input').blur( function () {
+                //     if (name == "Alex") {
+                //         $('#err').text( "Hey there !");
+                //     }
+                //     else {
+                //         $('#err').text( "Good evening sir...");
+                //     }
+                // })
+                $('#chico').click( function () {
+                    var divs = $(this).parent().find('div');
+                    divs.each( function (elem) {
+                        $(this).text('Chauuu');
+                    });
+                });
+                $('#grande').mouseover( function () {
+                    $(this).addClass('big');
+                });
+                $('#grande').mouseout( function () {
+                    $(this).removeClass('big');
+                });
+                // $('div').click( function () {
+                //     var elemClicked = $(this);
+                //     var elemId = elemClicked.attr('id');
+                //     alert(elemId + " was clicked");
+                // })
+            })
+        </script>
+    </body>
+</html>
